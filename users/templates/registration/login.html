@@ -1,0 +1,26 @@
+<!--users/templates/registration/login.html-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = 'col-sm-12 my-auto'>
+<table class = ' table table-light' >
+    <tr>
+        <td>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Login">
+             </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td><a href="{% url 'dashboard' %}">Back to dashboard</a></td>
+        <td><a href="{% url 'password_reset' %}">Reset password</a></td>
+        <td><a href="{% url 'register' %}">Register</a></td>
+
+    </tr>
+</table>
+</div>
+{% endblock %}
