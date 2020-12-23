@@ -11,5 +11,8 @@ try commit
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d56f953 (django)
 Yeoh will do, kavien do ka tiok 

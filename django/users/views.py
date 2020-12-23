@@ -16,7 +16,7 @@ def dashboard(request):
                         opacity=0.8, marker_color='green')],
                output_type='div')
     return render(request, "users/dashboard.html", context={'plot_div': plot_div})
-
+ 
 def register(request):
 
     if request.method == "GET":
