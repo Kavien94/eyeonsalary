@@ -4,11 +4,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container-fluid">
+  <form method="post">
+    <table>
+      {% csrf_token %}
+      <tr>
+        <td>Search By State:</td>
+        <td><input type="text" name="query"></td>
+      </tr>
+
+      <tr>
+        <td>Search By Position:</td>
+        <td><input type="text" name="query_pos"></td>
+      </tr>
 
 
-<div>
-    {% autoescape off %}
-  {{ plot_div }}
+      <tr>
+        <td> Graph Type: </td>
+        <td>
+
+          <select name = "dropDownSelection" >
+            <option value="1">Average Starting Salary</option>
+            <option value="2">Average Highest Salary Offerred</option>
+            <option value="3">Min VS Max Starting Salary Offerred</option>
+            <option value="4">Min VS Max Highest Salary Offerred</option>
+          </select>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Sorting: </td>
+        <td>
+         <select name = "dropDownSorting" >
+            <option value="1">Decending</option>
+            <option value="2">Accending</option>
+            
+          </select>
+        </td>
+
+      </tr>
+
+
+      <td><input type="submit" value="Search"></td>
+    </table>
+  </form>
+
+
+
+  {% autoescape off %}
+    {{ plot_div }}
   {% endautoescape %}
+
 </div>
 {% endblock %}

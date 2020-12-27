@@ -15,16 +15,15 @@
     <tr>
         <td>
             <form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Register">
-</form>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Register">
+            </form>
         </td>
     </tr>
 
     <tr>
         <td><a href="{% url 'login' %}">Back to login</a></td>
-
     </tr>
 </table>
 </div>
