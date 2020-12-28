@@ -52,7 +52,7 @@ def dashboard(request):
         dataAv = len(AvgStartingSal)
         data = go.Bar(x = x_data, y= y_data, name="Avg", marker_color='#99edff')
         data=go.Data([data])
-        layout=go.Layout(title="Average Starting Salary Offred", xaxis={'title':'Positions'}, 
+        layout=go.Layout(title="Average Starting Salary Offered", xaxis={'title':'Positions'}, 
         yaxis={'title':'Average Salary'},height= 1500, plot_bgcolor='rgb(255,255,255)')
     
     
@@ -124,7 +124,7 @@ def dashboard(request):
             
         data = go.Bar(x = x_data, y= y_data, name="Highest Average", marker_color='#99edff')
         data=go.Data([data])
-        layout=go.Layout(title="Average Highest Salary Offred", xaxis={'title':'Positions'}, 
+        layout=go.Layout(title="Average Highest Salary Offered", xaxis={'title':'Positions'}, 
         yaxis={'title':'Average Salary'}, height= 2050, plot_bgcolor='rgb(255,255,255)')
             
     elif graph_option == "3":
